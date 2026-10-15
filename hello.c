@@ -1,6 +1,6 @@
 #include <stdio.h>
 int main(void)
 {
-printf("Hellooo, Linux!\n");
+printf("Hallo, Linux!\n");
 return 0;
 }
