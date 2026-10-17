@@ -9,7 +9,7 @@ int main(void) {
     printf("Bitte Dateipfad eingeben: ");
     scanf("%100s", dateipfad);
 
-    //Datei zum Schreiben oeffnen ("w" steht fuer write)
+    //Datei zum Schreiben oeffnen
     datei = fopen(dateipfad, "w");
 
     //Fehler beim oeffnen erkennen und behandeln
@@ -27,7 +27,7 @@ int main(void) {
     //Datei schliessen
     fclose(datei);
 
-    //Datei zum Lesen oeffnen ("r" steht fuer read)
+    //Datei zum Lesen oeffnen
     datei = fopen(dateipfad, "r");
     if (datei == NULL) {
         printf("Fehler: Die Datei '%s' konnte nicht zum Lesen geoeffnet werden.\n", dateipfad);
@@ -35,7 +35,7 @@ int main(void) {
     }
 
     //Gespeicherten Inhalt auslesen und ausgeben
-    printf("\n--- Ausgabe ---\nGelesener Inhalt aus der Datei:\n");
+    printf("\nGelesener Inhalt aus der Datei:\n");
     int zeichen;
     //Schleife laeuft, bis zum Ende der Datei (EOF - End of File)
         while ((zeichen = fgetc(datei)) != EOF) {
